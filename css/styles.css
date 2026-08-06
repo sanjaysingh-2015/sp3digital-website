@@ -471,3 +471,113 @@ h2.section-title {
     min-width: 60px;
   }
 }
+
+.contact-label {
+  font-size: 12px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+  color: #94a3b8;
+
+  margin-bottom: 6px;
+
+  font-weight: 600;
+}
+
+.contact-value {
+  color: #fff;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  margin-bottom: 18px;
+}
+
+.contact-benefits {
+  margin-top: 50px;
+
+  padding: 30px;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contact-benefits h3 {
+  color: #fff;
+
+  margin-bottom: 20px;
+}
+
+.contact-benefits ul {
+  list-style: none;
+
+  padding: 0;
+
+  margin: 0;
+}
+
+.contact-benefits li {
+  color: #cbd5e1;
+
+  padding: 10px 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  font-size: 15px;
+}
+
+.contact-benefits li:last-child {
+  border-bottom: none;
+}
+
+#contact-form {
+  background: #fff;
+
+  padding: 40px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+#contact-form label {
+  font-weight: 600;
+
+  color: #0f172a;
+
+  margin-bottom: 8px;
+
+  display: block;
+}
+
+#contact-form input,
+#contact-form select,
+#contact-form textarea {
+  width: 100%;
+
+  padding: 14px 16px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 10px;
+
+  font-size: 15px;
+
+  transition: 0.3s;
+}
+
+#contact-form input:focus,
+#contact-form select:focus,
+#contact-form textarea:focus {
+  outline: none;
+
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
