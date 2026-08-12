@@ -1946,14 +1946,14 @@
                     <div class="snapshot-row">
                       <div class="snapshot-label">Programs Managed</div>
                       <div class="snapshot-value">
-                        05 
+                        05
                       </div>
                     </div>
 
                     <div class="snapshot-row">
                       <div class="snapshot-label">Team Size</div>
                       <div class="snapshot-value">
-                        04 Engineers 
+                        04 Engineers
                       </div>
                     </div>
 
@@ -2148,45 +2148,45 @@
             </div>
           </div>
           <!-- Right Side -->
-          <form id="contact-form" data-reveal data-reveal-delay="1" novalidate>
+          <form id="contact-form" data-reveal data-reveal-delay="1" novalidate action="https://formspree.io/f/mgawyelw" method="POST">
             <!-- Row 1 -->
             <div class="grid grid-2" style="margin-bottom:20px;">
               <div class="field">
                 <label>Full Name *</label>
-                <input type="text" name="name" placeholder="John Smith" required>
+                <input type="text" name="name" id="name" placeholder="John Smith" required>
               </div>
               <div class="field">
                 <label>Company *</label>
-                <input type="text" name="company" placeholder="ABC Corporation" required>
+                <input type="text" name="company" id="company" placeholder="ABC Corporation" required>
               </div>
             </div>
             <!-- Row 2 -->
             <div class="grid grid-2" style="margin-bottom:20px;">
               <div class="field">
                 <label>Industry *</label>
-                <select name="industry">
-                  <option>Select Industry</option>
-                  <option>Healthcare</option>
-                  <option>Insurance</option>
-                  <option>Financial Services</option>
-                  <option>Visa & Immigration</option>
-                  <option>Government</option>
-                  <option>Supply Chain & Logistics</option>
-                  <option>Manufacturing</option>
-                  <option>Retail & Commerce</option>
-                  <option>Technology</option>
-                  <option>Other</option>
+                <select name="industry" id="industry" required>
+                  <option value="" disabled selected>Select Industry</option>
+                  <option value="Healthcare">Healthcare</option>
+                  <option value="Insurance">Insurance</option>
+                  <option value="Financial Services">Financial Services</option>
+                  <option value="Visa & Immigration">Visa & Immigration</option>
+                  <option value="Government">Government</option>
+                  <option value="Supply Chain & Logistics">Supply Chain & Logistics</option>
+                  <option value="Manufacturing">Manufacturing</option>
+                  <option value="Retail & Commerce">Retail & Commerce</option>
+                  <option value="Technology">Technology</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
               <div class="field">
                 <label>Expected Timeline</label>
-                <select name="timeline">
-                  <option>Select Timeline</option>
-                  <option>Immediately</option>
-                  <option>Within 30 Days</option>
-                  <option>1–3 Months</option>
-                  <option>3–6 Months</option>
-                  <option>6+ Months</option>
+                <select name="timeline" id="timeline">
+                  <option value="" selected>Select Timeline</option>
+                  <option value="Immediately">Immediately</option>
+                  <option value="Within 30 Days">Within 30 Days</option>
+                  <option value="1–3 Months">1–3 Months</option>
+                  <option value="3–6 Months">3–6 Months</option>
+                  <option value="6+ Months">6+ Months</option>
                 </select>
               </div>
             </div>
@@ -2194,23 +2194,23 @@
             <div class="grid grid-2" style="margin-bottom:20px;">
               <div class="field">
                 <label>Business Email *</label>
-                <input type="email" name="email" placeholder="john@company.com" required>
+                <input type="email" name="email" id="email" placeholder="john@company.com" required>
               </div>
               <div class="field">
                 <label>Phone</label>
-                <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX">
+                <input type="tel" name="phone" id="phone" placeholder="+91 XXXXX XXXXX">
               </div>
             </div>
             <!-- Current Challenge -->
             <div class="field" style="margin-bottom:20px;">
               <label>Current Challenge *</label>
-              <textarea rows="4" name="challenge"
+              <textarea rows="4" name="challenge" id="challenge"
                 placeholder="Describe your current business or technology challenge..." required></textarea>
             </div>
             <!-- Additional Notes -->
             <div class="field" style="margin-bottom:30px;">
               <label>Additional Information</label>
-              <textarea rows="5" name="message"
+              <textarea rows="5" name="message" id="message"
                 placeholder="Tell us more about your project, goals, or expectations..."></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-block btn-lg">
@@ -2218,7 +2218,7 @@
             </button>
             <p id="form-status" class="form-status" role="status" aria-live="polite">
             </p>
-          </form>
+          </form>        
         </div>
       </div>
     </section>
