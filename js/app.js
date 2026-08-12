@@ -13,8 +13,8 @@
   // 2. Verify that inbox (GoDaddy webmail) via the confirmation email Formspree sends
   // 3. Replace YOUR_FORM_ID below with the ID Formspree gives you (from the endpoint
   //    URL https://formspree.io/f/YOUR_FORM_ID)
-  // const FORM_ENDPOINT = "https://formspree.io/f/mgawyelw";
-  const FORM_ENDPOINT = "/send-mail.php";
+  const FORM_ENDPOINT = "https://formspree.io/f/mgawyelw";
+  
 
   const form = document.getElementById("contact-form");
   const status = document.getElementById("form-status");
