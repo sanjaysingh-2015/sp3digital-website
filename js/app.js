@@ -70,7 +70,10 @@
       };
 
       try {
+        console.log("Sending Email");
+        console.log(window.location.hostname);
         const endpoint = `${window.APP_CONFIG.API_BASE_URL}/notifications/send`;
+        console.log(endpoint);
         const response = await fetch(
           endpoint,
           {
