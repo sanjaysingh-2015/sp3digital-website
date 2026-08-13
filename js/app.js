@@ -14,7 +14,6 @@
   // 3. Replace YOUR_FORM_ID below with the ID Formspree gives you (from the endpoint
   //    URL https://formspree.io/f/YOUR_FORM_ID)
   const FORM_ENDPOINT = "https://formspree.io/f/mgawyelw";
-  
 
   const form = document.getElementById("contact-form");
   const status = document.getElementById("form-status");
@@ -52,12 +51,37 @@
       submitBtn.disabled = true;
       submitBtn.textContent = "Sending…";
 
+      // Build formatted email body text
+      const bodyText = `Name : ${form.elements["name"]?.value || ""}
+                        Email: ${form.elements["email"]?.value || ""}
+                        Phone: ${form.elements["phone"]?.value || ""}
+                        Industry: ${form.elements["industry"]?.value || ""}
+                        Company: ${form.elements["company"]?.value || ""}
+                        Timeline: ${form.elements["timeline"]?.value || ""} 
+                        Current Challenge: ${form.elements["challenge"]?.value || ""}
+                        Additional Info: ${form.elements["message"]?.value || ""}`;
+      const subject = `SP3 Digital: Lead: ${form.elements["industry"]?.value || ""} ${form.elements["company"]?.value || ""}`;
+      // Custom API Payload
+      const payload = {
+        channel: "email",
+        recipient: "contact@sp3digital.com",
+        subject: subject,
+        content: bodyText,
+      };
+
       try {
-        const response = await fetch(FORM_ENDPOINT, {
-          method: "POST",
-          body: new FormData(form),
-          headers: { Accept: "application/json" },
-        });
+        const endpoint = `${window.APP_CONFIG.API_BASE_URL}/notifications/send`;
+        const response = await fetch(
+          endpoint,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: JSON.stringify(payload),
+          },
+        );
 
         if (response.ok) {
           status.textContent =
@@ -67,8 +91,8 @@
         } else {
           const data = await response.json().catch(() => null);
           const message =
-            data && data.errors && data.errors.length
-              ? data.errors.map((err) => err.message).join(" ")
+            data && data.error
+              ? data.error
               : "Something went wrong while sending your message. Please try again or email us directly.";
           status.textContent = message;
           status.classList.add("error", "is-visible");
@@ -120,7 +144,7 @@
       });
     });
   });
-  
+
   /* ---- Newsletter (footer) ---- */
   const newsletter = document.getElementById("newsletter-form");
   if (newsletter) {
