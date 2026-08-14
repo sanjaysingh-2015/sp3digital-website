@@ -9,7 +9,7 @@ const isLocal =
 window.APP_CONFIG = {
   API_BASE_URL: isLocal 
     ? 'http://localhost:3000/api/v1' 
-    : 'https://sp3digital-notification-service-156555040413.us-central1.run.app/api/v1',
+    : 'https://notification.sp3digitalcom/api/v1',
   
   ENVIRONMENT: isLocal ? 'development' : 'production'
 };
